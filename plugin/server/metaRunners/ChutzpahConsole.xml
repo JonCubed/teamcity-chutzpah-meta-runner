@@ -13,7 +13,7 @@
         <parameters>
           <param name="jetbrains_powershell_bitness" value="x86" />
           <param name="jetbrains_powershell_execution" value="PS1" />
-          <param name="jetbrains_powershell_scriptArguments" value="-nugetexe %teamcity.tool.NuGet.CommandLine.DEFAULT.nupkg\tools\nuget.exe% -path %path.chutzpahUnitTest% -teamcity %codeCoverage% %failOnError% %debug%" />
+          <param name="jetbrains_powershell_scriptArguments" value="-nugetexe %teamcity.tool.NuGet.CommandLine.DEFAULT.nupkg%\tools\nuget.exe -path %path.chutzpahUnitTest% -teamcity %codeCoverage% %failOnError% %debug%" />
           <param name="jetbrains_powershell_script_file" value="%teamcity.agent.tools.dir%\ChutzpahConsole\tools\chutzpah-run.ps1" />
           <param name="jetbrains_powershell_script_mode" value="FILE" />
           <param name="teamcity.step.mode" value="default" />
