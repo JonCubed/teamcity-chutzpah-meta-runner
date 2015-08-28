@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="Chutzpah Console">
+  <description>Run Chutzpah Console</description>
+  <settings>
+    <parameters>
+      <param name="path.chutzpahUnitTest" value="" spec="text description='A path to a folder or file to the list of test paths to run' validationMode='not_empty' label='Chutzpah Test folder' display='normal'" />
+      <param name="codeCoverage" value="" spec="checkbox description='Enable to produce code coverage report' label='Enable code coverage' display='normal' checkedValue='-coverage'" />
+      <param name="failOnError" value="" spec="checkbox description='Return a non-zero exit code if any script errors or timeouts occurs' label='Fail on error' display='normal' checkedValue='-failOnError'" />
+      <param name="debug" value="" spec="checkbox description='Print debugging information and tracing to console' label='Enable debug mode' display='normal' checkedValue='-debug '" />
+    </parameters>
+    <build-runners>
+      <runner name="Chutzpah Runner" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_scriptArguments" value="-nugetexe %teamcity.tool.NuGet.CommandLine.DEFAULT.nupkg\tools\nuget.exe% -path %path.chutzpahUnitTest% -teamcity %codeCoverage% %failOnError% %debug%" />
+          <param name="jetbrains_powershell_script_file" value="%teamcity.agent.tools.dir%\ChutzpahConsole\tools\chutzpah-run.ps1" />
+          <param name="jetbrains_powershell_script_mode" value="FILE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
