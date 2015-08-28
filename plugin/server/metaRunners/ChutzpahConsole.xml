@@ -3,7 +3,7 @@
   <description>Run Chutzpah Console</description>
   <settings>
     <parameters>
-      <param name="path.chutzpahUnitTest" value="" spec="text description='A path to a folder or file to the list of test paths to run' validationMode='not_empty' label='Chutzpah Test folder' display='normal'" />
+      <param name="path.chutzpahUnitTest" value="" spec="text description='A path to a folder or file to the list of test paths to run' validationMode='not_empty' label='Test folder' display='normal'" />
       <param name="codeCoverage" value="" spec="checkbox description='Enable to produce code coverage report' label='Enable code coverage' display='normal' checkedValue='-coverage'" />
       <param name="failOnError" value="" spec="checkbox description='Return a non-zero exit code if any script errors or timeouts occurs' label='Fail on error' display='normal' checkedValue='-failOnError'" />
       <param name="debug" value="" spec="checkbox description='Print debugging information and tracing to console' label='Enable debug mode' display='normal' checkedValue='-debug '" />
