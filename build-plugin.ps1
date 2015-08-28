@@ -7,7 +7,7 @@ $packingFolder = ".\.artifacts"
 $agentFolder = Join-Path $packingFolder "agent"
 
 # Create .package folder
-if (-not (Test-Path .package))
+if (-not (Test-Path $packingFolder))
 {
     Write-Output "Creating $packingFolder"
     New-Item $packingFolder -ItemType Directory
